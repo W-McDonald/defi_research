@@ -163,6 +163,47 @@ class DefiLlama():
         return self._handle_request(url)
 
 
+
+    # volumes section
+
+    def list_dex_overview(self):
+        url = f'{self.common_base_url}/overview/dexs'
+        return self._handle_request(url)
+
+    def list_dex_overview_by_chain(self, chain):
+        url = f'{self.common_base_url}/overview/dexs/{chain}'
+        return self._handle_request(url)
+
+    def dex_summary_by_protocol(self, protocol):
+        url = f'{self.common_base_url}/summary/dexs/{protocol}'
+        return self._handle_request(url)
+
+    def list_options_overview(self):
+        url = f'{self.common_base_url}/overview/options'
+        return self._handle_request(url)
+
+    def list_options_overview_by_chain(self, chain):
+        url = f'{self.common_base_url}/overview/options/{chain}'
+        return self._handle_request(url)
+
+    def options_summary_by_protocol(self, protocol):
+        url = f'{self.common_base_url}/summary/options/{protocol}'
+        return self._handle_request(url)
+
+    # fees and revenue section
+    def list_fees_overview(self):
+        url = f'{self.common_base_url}/overview/fees'
+        return self._handle_request(url)
+
+    def list_fees_overview_by_chain(self, chain):
+        url = f'{self.common_base_url}/overview/fees/{chain}'
+        return self._handle_request(url)
+
+    def fees_summary_by_protocol(self, protocol):
+        url = f'{self.common_base_url}/summary/fees/{protocol}'
+        return self._handle_request(url)
+
+
 if __name__ == '__main__':
 
     dl = DefiLlama()
